@@ -1,0 +1,384 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    width: 100vw;
+    min-height: 82vh;
+    overflow-x: hidden;
+    background-color: rgb(219, 218, 211);
+}
+.head-main{
+    display: flex;
+    background-color: #3f638e;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(159, 116, 0);
+}
+.head{
+    margin:0;
+    display: flex;
+}
+#icon{
+    margin-left: 29px;
+    margin-top: 12px;
+    height: 70px;
+    width: 50px;
+}
+/* Responsive navigation */
+#title {
+    color: rgb(204, 232, 222);
+    font-size: 2.3rem;
+    margin-left: 10px;
+    display: flex;
+    margin-top: 1.5rem;
+}
+/* styles for the search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 1rem;
+}
+
+#search-date, #search-button {
+    margin: 20px 10px;
+}
+
+#search-date{
+    width:130px;
+    font-size: 1.18rem;
+    border-radius: 5px;
+}
+
+#search-button, #clear-button {
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 2px 2px black;
+    background-color: #748E63;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#search-button:hover, #clear-button:hover {
+    background-color: white;
+    color: #748E63;
+    box-shadow: none;
+}
+
+#search-button:focus, #clear-button:focus {
+    outline: none;
+}
+
+.budget-tracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.budget-tracker th {
+    margin-top: 25px;
+    height: 40px;
+    text-align: left;
+    font-size:1.9em;  
+}
+.budget-tracker th:hover{
+    text-decoration: underline rgb(189, 189, 231);
+}
+thead tr{  
+    opacity: 0.5.1;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 70vw;
+}
+.budget-tracker td {
+    margin-top: 4px;
+    padding: 5px;
+}
+.input {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0 10px;
+    height: 27px;
+    width:50px;
+}
+.entries tr{
+    width: 64vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+.input-date{
+    font-size:16.3px;
+    width:119.9px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.input-description{
+    width: 230px;
+}
+.input-type{
+    width:100px;
+}
+.input-amount{
+    width: 110px;
+}
+.delete-entry {
+    height: 1.3rem;
+    font-size: 1.3em;
+    padding: 0 10px;
+    margin-left: 40px;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    border-color: #bbbbbb;
+}
+
+.new-entry{
+    font-size: 1rem;
+    width: 93px;
+    float: left;
+    border-radius: 9px;
+    height: 25px;
+}
+.new-entry:hover{
+    background-color: #2a6105;
+}
+ 
+.delete-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    background: none;
+    color: red;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.delete-entry:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.controls,
+.summary {
+    text-align: right;
+}
+.corner{
+    width: 81vw;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    flex-wrap: nowrap;
+} 
+.Total{
+    margin-top: 12px;
+    font-size: 22px;
+}
+footer{
+    text-align: center;
+    font-size: 1.1em;
+    color: rgb(80, 77, 77);
+    background-color: rgb(219, 218, 211);
+    width: 100vw;
+    height: 30px;
+    margin-top: 0;;
+}
+@media (max-width:300px){
+    
+    thead tr{
+        width: 100vw;
+        justify-content: start;
+        gap:15px;
+    }
+    .budget-tracker th {
+        font-size: 15px;
+        height: 30px;
+    }
+    .entries tr{
+        width: 100vw;
+    }
+    .input{
+        height: 45px;
+    }
+    .input-date{
+        font-size:6.9px;
+        width:28px;
+    }
+    .input-description{
+        width: 53px;
+        font-size: 10px;
+    }
+    .input-type{
+        width:50px;
+        font-size:7px;
+    }
+    .input-amount{
+        width: 22px;
+        font-size: 11px;
+    }
+    .delete-entry{
+        width: 1px;
+        margin-left: 0px;
+    }
+    .corner{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width:300px) and (max-width:415px){
+    
+    thead tr{
+        width: 100vw;
+        justify-content:start;
+        gap:34px;
+        height:55px;
+    }
+    .budget-tracker th {
+        font-size: 17px;
+
+    }
+    .entries tr{
+        width: 100vw;
+    }
+    .input-date{
+        font-size:8.7px;
+        width:50px;
+    }
+    .input-description{
+        width: 94px;
+        font-size: 12px;
+    }
+    .input-type{
+        width:55px;
+        font-size:8px;
+    }
+    .input-amount{
+        width: 33px;
+        font-size: 11px;
+    }
+    .delete-entry{
+        margin-left: 9px;
+    }
+    .corner{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width:415px) and (max-width:600px){
+    
+    thead tr{
+        width: 100vw;
+        justify-content:start;
+        gap:47px;
+        height:55px;
+    }
+    .budget-tracker th {
+        font-size: 20px;
+    }
+    .entries tr{
+        width: 100vw;
+    }
+    .input-date{
+        font-size:8px;
+        width:60px;
+    }
+    .input-description{
+        width: 110px;
+        font-size: 12px;
+    }
+    .input-type{
+        width:70px;
+        font-size:9px;
+    }
+    .input-amount{
+        width: 40px;
+        font-size: 12px;
+    }
+    .delete-entry{
+        margin-right: 10px;
+    }
+    .corner{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width:600px) and (max-width:850px){
+
+    thead tr{
+        width: 89vw;
+    }
+    .budget-tracker th {
+        font-size: 25px;
+    }
+    .entries tr{
+        width: 88vw;
+    }
+    .input-date{
+        font-size:12px;
+        width:90px;
+    }
+    .input-description{
+        width: 145px;
+        font-size: 15px;
+    }
+    .input-type{
+        width:80px;
+        font-size:11px;
+    }
+    .input-amount{
+        width: 60px;
+        font-size: 14px;
+    }
+    .corner{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width:850px) and (max-width:1200px){
+    
+    thead tr{
+        width: 84vw;
+    }
+    .budget-tracker th {
+        font-size: 25px;
+    }
+    .entries tr{
+        width: 83vw;
+    }
+    .input-date{
+        font-size:13px;
+        width:100px;
+    }
+    .input-description{
+        width: 165px;
+        font-size: 15px;
+    }
+    .input-type{
+        margin-left: 20px;
+        width:90px;
+        font-size:13px;
+    }
+    .input-amount{
+        width: 75px;
+        font-size: 16px;
+    }
+    .corner{
+        justify-content: center;
+        align-items: center;
+    }
+}
