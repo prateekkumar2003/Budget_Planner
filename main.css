@@ -107,6 +107,7 @@ thead tr{
     padding: 0 10px;
     height: 27px;
     width:50px;
+    border-radius: 11px;
 }
 .entries tr{
     width: 64vw;
