@@ -24,6 +24,7 @@ function save() {
   localStorage.setItem("budget-entries", JSON.stringify(entriesData));
   updateSummary();
 }
+/*
 ///////
 // Add a new entry row
 function addEntry(entry = {}) {
@@ -53,7 +54,7 @@ function addEntry(entry = {}) {
     row.querySelector(`.input-${input}`).addEventListener("change", save);
   });
 }
-/*
+*/
 
 // Add a new entry row
 function addEntry(entry = {}) {
@@ -73,8 +74,7 @@ function addEntry(entry = {}) {
   inputs.forEach((input) => {
     row.querySelector(`.input-${input}`).addEventListener("change", save);
   });
-}*/
-
+}
 
 
 // Remove an entry row
