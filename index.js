@@ -24,40 +24,22 @@ function save() {
   localStorage.setItem("budget-entries", JSON.stringify(entriesData));
   updateSummary();
 }
-/*
-///////
+
+//////////////////////////////////////////
 // Add a new entry row
 function addEntry(entry = {}) {
-  entries.insertAdjacentHTML("beforeend", entryHtml());
+  const lastRow = entries.querySelector("tr:last-of-type");
 
-  const row = entries.querySelector("tr:last-of-type");
-  const inputs = ["date", "description", "type", "amount"];
+  if (lastRow) {
+    const lastRowDescription = lastRow.querySelector(".input-description").value;
+    const lastRowType = lastRow.querySelector(".input-type").value;
+    const lastRowAmount = lastRow.querySelector(".input-amount").value;
 
-  inputs.forEach((input) => {
-    const inputElement = row.querySelector(`.input-${input}`);
-    inputElement.value = entry[input] || (input === "date" ? new Date().toISOString().split("T")[0] : "");
+    if (lastRowDescription.trim() === "" || lastRowType.trim() === "" || lastRowAmount.trim() === "") {
+      return; // Don't add a new row if the last row's fields are empty
+    }
+  }
 
-    // Add event listener to check for input validation
-    inputElement.addEventListener("change", () => {
-      // Check if any required input is empty, and disable the "New Entry" button accordingly
-      const disableNewEntry = inputs.some((input) => {
-        const inputElement = row.querySelector(`.input-${input}`);
-        return (input === "amount" && parseFloat(inputElement.value) <= 0) || inputElement.value.trim() === "";
-      });
-
-      document.querySelector(".new-entry").disabled = disableNewEntry;
-    });
-  });
-
-  row.querySelector(".delete-entry").addEventListener("click", onDeleteEntryBtnClick);
-  inputs.forEach((input) => {
-    row.querySelector(`.input-${input}`).addEventListener("change", save);
-  });
-}
-*/
-
-// Add a new entry row
-function addEntry(entry = {}) {
   entries.insertAdjacentHTML("beforeend", entryHtml());
 
   const row = entries.querySelector("tr:last-of-type");
@@ -74,8 +56,32 @@ function addEntry(entry = {}) {
   inputs.forEach((input) => {
     row.querySelector(`.input-${input}`).addEventListener("change", save);
   });
+  // Enable the "New Entry" button after adding an entry
+  // document.querySelector(".new-entry").disabled = false;
 }
+/////////////////////////////////////////////////////////////////////
 
+/*
+// Add a new entry row
+function addEntry(entry = {}) {  
+    entries.insertAdjacentHTML("beforeend", entryHtml());
+
+    const row = entries.querySelector("tr:last-of-type");
+    const inputs = ["date", "description", "type", "amount"];
+
+    inputs.forEach((input) => {
+      row.querySelector(`.input-${input}`).value =
+        entry[input] ||
+        (input === "date" ? new Date().toISOString().split("T")[0] : "");
+    });
+    row
+      .querySelector(".delete-entry")
+      .addEventListener("click", onDeleteEntryBtnClick);
+    inputs.forEach((input) => {
+      row.querySelector(`.input-${input}`).addEventListener("change", save);
+    });
+}
+*/
 
 // Remove an entry row
 function onDeleteEntryBtnClick(e) {
