@@ -5,7 +5,7 @@
 
 .main{
     width: 100vw;
-    min-height: 82vh;
+    min-height: 87.1vh;
     overflow-x: hidden;
     background-color: rgb(219, 218, 211);
 }
@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     float: right;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 #search-date, #search-button {
@@ -187,7 +187,8 @@ thead tr{
 } 
 .Total{
     margin-top: 12px;
-    font-size: 22px;
+    margin-bottom: 50px;
+    font-size: 30px;
 }
 footer{
     text-align: center;
