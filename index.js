@@ -31,11 +31,17 @@ function addEntry(entry = {}) {
   const lastRow = entries.querySelector("tr:last-of-type");
 
   if (lastRow) {
-    const lastRowDescription = lastRow.querySelector(".input-description").value;
+    const lastRowDescription =
+      lastRow.querySelector(".input-description").value;
     const lastRowType = lastRow.querySelector(".input-type").value;
     const lastRowAmount = lastRow.querySelector(".input-amount").value;
 
-    if (lastRowDescription.trim() === "" || lastRowType.trim() === "" || lastRowAmount.trim() === "") {
+    if (
+      lastRowDescription.trim() === "" ||
+      lastRowType.trim() === "" ||
+      lastRowAmount.trim() === ""
+    ) {
+      window.alert("Please Fill the Previous Row befor creating a new one");
       return; // Don't add a new row if the last row's fields are empty
     }
   }
@@ -91,6 +97,12 @@ function onDeleteEntryBtnClick(e) {
 
 // Update the summary total
 function updateSummary() {
+  /*
+  int[] arr={1,2,3,4,5};
+  In this example, the reduce() function accumulates the sum of the numbers in 
+  the array starting with an initial value of 0. The callback function adds the 
+  current element to the accumulator at each step, resulting in a final sum of 15.
+  */
   total = Array.from(entries.querySelectorAll("tr")).reduce((acc, row) => {
     const amount = parseFloat(row.querySelector(".input-amount").value) || 0;
     const isExpense = row.querySelector(".input-type").value === "expense";
