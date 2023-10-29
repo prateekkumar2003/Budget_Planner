@@ -76,5 +76,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-This README provides an overview of the Budget Planner web application, its features, how to install and use it, and how to contribute to its development. Feel free to customize this README according to your project's specific needs.
