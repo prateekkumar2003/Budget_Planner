@@ -34,7 +34,7 @@ To run this application locally, follow these steps:
 
 3. Navigate to the project directory:
 
-   - cd budget-planner
+   - cd Budget_Planner
 
 3. Open the `index.html` file in your web browser.
 
