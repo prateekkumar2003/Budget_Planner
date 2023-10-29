@@ -30,7 +30,7 @@ To run this application locally, follow these steps:
 
 1. Clone the repository to your local machine:
 
-   - git clone https://github.com/yourusername/budget-planner.git
+   - git clone https://github.com/prateekkumar2003/FEE_Project
 
 3. Navigate to the project directory:
 
