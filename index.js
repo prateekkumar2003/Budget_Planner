@@ -25,7 +25,6 @@ function save() {
   updateSummary();
 }
 
-//////////////////////////////////////////
 // Add a new entry row
 function addEntry(entry = {}) {
   const lastRow = entries.querySelector("tr:last-of-type");
@@ -62,33 +61,7 @@ function addEntry(entry = {}) {
   inputs.forEach((input) => {
     row.querySelector(`.input-${input}`).addEventListener("change", save);
   });
-  // Enable the "New Entry" button after adding an entry
-  // document.querySelector(".new-entry").disabled = false;
 }
-/////////////////////////////////////////////////////////////////////
-
-/*
-// Add a new entry row
-function addEntry(entry = {}) {  
-    entries.insertAdjacentHTML("beforeend", entryHtml());
-
-    const row = entries.querySelector("tr:last-of-type");
-    const inputs = ["date", "description", "type", "amount"];
-
-    inputs.forEach((input) => {
-      row.querySelector(`.input-${input}`).value =
-        entry[input] ||
-        (input === "date" ? new Date().toISOString().split("T")[0] : "");
-    });
-    row
-      .querySelector(".delete-entry")
-      .addEventListener("click", onDeleteEntryBtnClick);
-    inputs.forEach((input) => {
-      row.querySelector(`.input-${input}`).addEventListener("change", save);
-    });
-}
-*/
-
 // Remove an entry row
 function onDeleteEntryBtnClick(e) {
   e.target.closest("tr").remove();
@@ -97,12 +70,7 @@ function onDeleteEntryBtnClick(e) {
 
 // Update the summary total
 function updateSummary() {
-  /*
-  int[] arr={1,2,3,4,5};
-  In this example, the reduce() function accumulates the sum of the numbers in 
-  the array starting with an initial value of 0. The callback function adds the 
-  current element to the accumulator at each step, resulting in a final sum of 15.
-  */
+
   total = Array.from(entries.querySelectorAll("tr")).reduce((acc, row) => {
     const amount = parseFloat(row.querySelector(".input-amount").value) || 0;
     const isExpense = row.querySelector(".input-type").value === "expense";
@@ -117,7 +85,6 @@ function updateSummary() {
 
   totalElement.textContent = totalFormatted;
 }
-
 // HTML template for a new entry row
 function entryHtml() {
   return `
