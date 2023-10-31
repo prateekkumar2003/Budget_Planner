@@ -21,7 +21,7 @@ It allows you to add, edit, and delete financial entries and provides a summary 
 
 ## Demo
 
-You can see the Budget Planner in action [![here](https://prateekkumar2003.github.io/Budget_Planner/)].
+You can see the Budget Planner in action [here](https://prateekkumar2003.github.io/Budget_Planner/).
 
 ## Installation
 
