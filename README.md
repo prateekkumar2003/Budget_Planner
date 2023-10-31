@@ -5,13 +5,12 @@ It allows you to add, edit, and delete financial entries and provides a summary 
 
 ## Table of Contents
 
-1. Features
-2. Demo
-3. Installation
-4. Usage
-5. Search-and-clear
-6. Contributing
-7. License
+1. [Features](#overview)
+2. [Demo](#demo)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Search and clear](#search-and-clear)
+6. [Contributing](#contributin)
 
 ## Features
 
@@ -22,7 +21,7 @@ It allows you to add, edit, and delete financial entries and provides a summary 
 
 ## Demo
 
-You can see the Budget Planner in action [here](#).
+You can see the Budget Planner in action [here](https://prateekkumar2003.github.io/Budget_Planner/).
 
 ## Installation
 
@@ -70,9 +69,5 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 2. Create a new branch for your feature or bug fix.
 3. Make your changes and test them thoroughly.
 4. Submit a pull request with a clear description of your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
